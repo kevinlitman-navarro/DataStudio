@@ -1,0 +1,12 @@
+Project 1 -- Pet Adoptions in New York City
+
+What I did:
+  For this project, I decided to look at data on Petfinder, a website that lists animals up for adoption. In order to keep the scope of the project narrow-ish, I only looked at data for pets in New York City. Thankfully, Petfinder has an API with most of their data. The way the API is set up, I decided that the best way to request data was to use a method that returned a list of pets at a given shelter if I provided the shelter ID number. So I first scraped a list of Shelter ID's from the website, and then ran a get request to obtain a JSON database for each of the shelters. Then I did some dictionary sorting stuff and put the data into a pandas dataframe, with each row corresponding to a unique adoptable pet. Lots of data cleaning and hand-wringing followed, and then I had a usable database, albeit only one with around 500 pets. 
+
+What I found:
+  Some fun, but probably largely meaningless things. Mostly, I isolated characteristics of the pets I sampled -- like whether or not they were vaccinated, or if they got along with children, or if their adoption agency described them with certain words -- and then measured cats against dogs to see the differences. I had some other charts in the works (seen in my jupyter notebook), but I wasn't able to get them all into the mediocre shape for which I was aiming.
+
+Nice to have improvements:
+  -- More data. So much of the analysis I did is probably meaningless, because my sample was too small. I'm not sure how many more pets are in the NYC area, but I could definitely expand by scraping from other cities if I wanted to really augment this project.
+  -- Different aggregations/analysis. With some more thought and time to put into this, I'm sure I could do some more interesting stuff than just value counting and throwing some bar graphs together
+  -- Design is hard
